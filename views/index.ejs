@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Weather Station</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #7454ff, #2d98da);
+    }
+
+    .weather-container {
+      background: linear-gradient(to bottom right, #8b5cff, #50a3a2);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+
+    p {
+      margin: 10px 0;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="weather-container">
+    <h1>Home Weather Station</h1>
+    <p><strong>Humidity:</strong> <%= data.humidity %></p>
+    <p><strong>Temperature:</strong> <%= data.temperature %></p>
+    <p><strong>Air Pressure:</strong> <%= data.airPressure %></p>
+    <p><strong>Is it Rainy?</strong> <%= data.isRainy ? 'Yes' : 'No' %></p>
+    <p><strong>Is it Sunny?</strong> <%= data.isSunny ? 'Yes' : 'No' %></p>
+  </div>
+</body>
+</html>
+
